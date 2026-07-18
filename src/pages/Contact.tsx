@@ -26,46 +26,46 @@ export const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="glass p-10 rounded-[30px] space-y-8 h-full">
+            <div className="glass p-6 md:p-10 rounded-[30px] space-y-8 h-full">
               <h2 className="text-3xl font-serif font-bold text-text-dark dark:text-cream mb-8 transition-colors">Contact Information</h2>
               
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
-                  <MapPin size={28} />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
+                  <MapPin size={24} className="sm:w-7 sm:h-7" />
                 </div>
                 <div>
                   <p className="text-sm font-mono uppercase tracking-widest text-text-dark/50 dark:text-cream/50 mb-2">Address</p>
-                  <p className="text-text-dark dark:text-cream font-sans font-bold text-lg transition-colors">KM 2, Ayetoro Road, <br/>Iloro Ekiti, Ekiti State, Nigeria</p>
+                  <p className="text-text-dark dark:text-cream font-sans font-bold text-base sm:text-lg transition-colors">KM 2, Ayetoro Road, <br/>Iloro Ekiti, Ekiti State, Nigeria</p>
                 </div>
               </div>
 
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
-                  <Phone size={28} />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
+                  <Phone size={24} className="sm:w-7 sm:h-7" />
                 </div>
                 <div>
                   <p className="text-sm font-mono uppercase tracking-widest text-text-dark/50 dark:text-cream/50 mb-2">Phone</p>
-                  <a href="tel:+2348139675417" className="text-text-dark dark:text-cream font-sans font-bold text-lg hover:text-accent-green transition-colors">+234 (0) 813 967 5417</a>
+                  <a href="tel:+2348139675417" className="text-text-dark dark:text-cream font-sans font-bold text-base sm:text-lg hover:text-accent-green transition-colors">+234 (0) 813 967 5417</a>
                 </div>
               </div>
 
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
-                  <Mail size={28} />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
+                  <Mail size={24} className="sm:w-7 sm:h-7" />
                 </div>
                 <div>
                   <p className="text-sm font-mono uppercase tracking-widest text-text-dark/50 dark:text-cream/50 mb-2">Email</p>
-                  <a href="mailto:info@veniteuniversity.edu.ng" className="text-text-dark dark:text-cream font-sans font-bold text-lg hover:text-accent-green transition-colors">info@veniteuniversity.edu.ng</a>
+                  <a href="mailto:info@veniteuniversity.edu.ng" className="text-text-dark dark:text-cream font-sans font-bold text-base sm:text-lg hover:text-accent-green transition-colors break-all">info@veniteuniversity.edu.ng</a>
                 </div>
               </div>
 
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
-                  <Clock size={28} />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary-green/10 rounded-2xl flex items-center justify-center text-primary-green flex-shrink-0">
+                  <Clock size={24} className="sm:w-7 sm:h-7" />
                 </div>
                 <div>
                   <p className="text-sm font-mono uppercase tracking-widest text-text-dark/50 dark:text-cream/50 mb-2">Office Hours</p>
-                  <p className="text-text-dark dark:text-cream font-sans font-bold text-lg transition-colors">Mon–Fri: 8:00 AM – 5:00 PM</p>
+                  <p className="text-text-dark dark:text-cream font-sans font-bold text-base sm:text-lg transition-colors">Mon–Fri: 8:00 AM – 5:00 PM</p>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <form className="glass p-10 rounded-[30px] space-y-6">
+            <form className="glass p-6 md:p-10 rounded-[30px] space-y-6">
               <h2 className="text-3xl font-serif font-bold text-text-dark dark:text-cream mb-8 transition-colors">Send a Message</h2>
               
               <div>

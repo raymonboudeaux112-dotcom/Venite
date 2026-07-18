@@ -22,23 +22,6 @@ export const About = () => {
         </div>
       </section>
 
-      {/* Image Banner */}
-      <section className="container mx-auto px-6 mb-24">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative rounded-[40px] overflow-hidden h-[500px] shadow-2xl"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1600"
-            alt="Venite University Campus"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-green/60 to-transparent"></div>
-        </motion.div>
-      </section>
-
       {/* Vision & Mission */}
       <section className="container mx-auto px-6 mb-24">
         <div className="grid md:grid-cols-2 gap-12">
