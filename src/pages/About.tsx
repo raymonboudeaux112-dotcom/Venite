@@ -22,6 +22,8 @@ export const About = () => {
         </div>
       </section>
 
+
+
       {/* Vision & Mission */}
       <section className="container mx-auto px-6 mb-24">
         <div className="grid md:grid-cols-2 gap-12">

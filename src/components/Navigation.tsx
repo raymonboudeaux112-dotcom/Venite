@@ -36,6 +36,7 @@ export const Navigation = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Admissions", path: "/admissions" },
     { name: "Programmes", path: "/programmes" },
     { name: "Contact", path: "/contact" },
   ];
