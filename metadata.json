@@ -1,0 +1,8 @@
+{
+  "name": "Venite University",
+  "description": "A premium, one-page landing page for Venite University, Iloro Ekiti, Nigeria, featuring luxury glassmorphism and African excellence aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

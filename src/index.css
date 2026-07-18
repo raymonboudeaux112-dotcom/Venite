@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-primary-green: #2E6B3E;
+  --color-accent-green: #4CAF72;
+  --color-cream: #F5F0E8;
+  --color-deep-cream: #EDE5D0;
+  --color-gold: #C9A84C;
+  --color-text-dark: #1A2A1F;
+
+  --animate-shimmer: shimmer 2s infinite linear;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+  cursor: none;
+  --bg-color: var(--color-cream);
+  --text-color: var(--color-text-dark);
+  --deep-cream: var(--color-deep-cream);
+}
+
+:root.dark {
+  --bg-color: #0d140f;
+  --text-color: var(--color-cream);
+  --deep-cream: #142018;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-accent-green);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.custom-cursor-follower {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-primary-green);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease-out;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(245, 240, 232, 0.18);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(46, 107, 62, 0.12);
+}
+
+:root.dark .glass {
+  background: rgba(13, 20, 15, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-green {
+  background: rgba(46, 107, 62, 0.15);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(76, 175, 114, 0.25);
+}
+
+:root.dark .glass-green {
+  background: rgba(46, 107, 62, 0.25);
+  border: 1px solid rgba(76, 175, 114, 0.15);
+}
+
+/* Shimmer Effect */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+
+.shimmer-btn:hover::after {
+  left: 150%;
+}
+
+/* Hide cursor on mobile or small screens where touch is used */
+@media (max-width: 768px) {
+  :root {
+    cursor: auto;
+  }
+  .custom-cursor, .custom-cursor-follower {
+    display: none;
+  }
+}
+
