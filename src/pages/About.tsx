@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import { BookOpen, Users, Compass, ShieldCheck } from "lucide-react";
+import { Compass, ShieldCheck, Award, Star } from "lucide-react";
 
 export const About = () => {
   return (
     <div className="pt-32 pb-24">
       {/* Header */}
-      <section className="container mx-auto px-6 mb-24">
+      <section className="container mx-auto px-6 mb-16">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,75 @@ export const About = () => {
         </div>
       </section>
 
+      {/* About Image Banner */}
+      <section className="container mx-auto px-6 mb-24">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative rounded-[40px] overflow-hidden h-[300px] sm:h-[450px] md:h-[600px] shadow-2xl group"
+        >
+          <img
+            src="/about_image.png"
+            alt="Venite University About"
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-green/60 via-transparent to-transparent"></div>
+        </motion.div>
+      </section>
 
+      {/* Leadership Profile: Vice-Chancellor */}
+      <section className="container mx-auto px-6 mb-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass p-8 md:p-12 rounded-[40px] overflow-hidden relative"
+        >
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent-green/10 blur-[100px] rounded-full pointer-events-none"></div>
+          
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="w-full md:w-2/5 shrink-0">
+              <div className="relative aspect-[3/4] rounded-[30px] overflow-hidden shadow-2xl">
+                <img 
+                  src="/vc_venite.png" 
+                  alt="Professor Charity O. Aremu" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <div className="w-full md:w-3/5">
+              <div className="inline-flex items-center gap-2 bg-primary-green/10 text-primary-green dark:text-accent-green px-4 py-2 rounded-full mb-6">
+                <Award size={16} />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider">University Leadership</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-dark dark:text-cream mb-2 transition-colors">
+                Professor Charity O. Aremu
+              </h2>
+              <h3 className="text-xl text-primary-green dark:text-accent-green font-medium mb-8">
+                Vice-Chancellor, Venite University (Inaugurated 2025/2026 Session)
+              </h3>
+              
+              <div className="space-y-6 text-text-dark/80 dark:text-cream/80 text-lg leading-relaxed mb-10 transition-colors">
+                <p>
+                  A renowned scholar and accomplished university administrator, Professor Aremu is dedicated to advancing academic excellence, groundbreaking research, innovation, and global partnerships. 
+                </p>
+                <p>
+                  Under her transformative leadership, Venite University is committed to producing creative, ethical, and industry-ready graduates equipped to make meaningful contributions to society.
+                </p>
+              </div>
+
+              <div className="pl-6 border-l-4 border-accent-green">
+                <p className="text-xl md:text-2xl font-serif italic text-text-dark dark:text-cream transition-colors">
+                  "Leadership rooted in excellence, innovation, integrity, and a commitment to shaping future leaders for global impact."
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Vision & Mission */}
       <section className="container mx-auto px-6 mb-24">
@@ -118,3 +186,4 @@ export const About = () => {
     </div>
   );
 };
+

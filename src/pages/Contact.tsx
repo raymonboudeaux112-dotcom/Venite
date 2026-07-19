@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Star } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -126,6 +126,76 @@ export const Contact = () => {
             </form>
           </motion.div>
         </div>
+
+        {/* Developer Spotlight */}
+        <section className="mt-24">
+          <div className="text-center mb-16">
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent-green font-bold mb-4 block">Meet The Builder</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-dark dark:text-cream transition-colors">Developer Spotlight</h2>
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/50 dark:bg-black/20 backdrop-blur-md border border-black/5 dark:border-white/10 p-8 md:p-12 rounded-[40px] overflow-hidden shadow-xl"
+          >
+            <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+              <div className="w-full lg:w-1/3 shrink-0">
+                <div className="relative aspect-square md:aspect-[4/5] rounded-[30px] overflow-hidden shadow-2xl border-4 border-white dark:border-dark-bg">
+                  <img 
+                    src="/portrait.jpg" 
+                    alt="Ibijola Adebobola David" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-full text-primary-green shadow-lg">
+                    <Star fill="currentColor" size={24} />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="w-full lg:w-2/3">
+                <div className="inline-flex items-center gap-2 bg-primary-green/10 text-primary-green dark:text-accent-green px-4 py-2 rounded-full mb-6">
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider">Full Stack Developer & Designer</span>
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-text-dark dark:text-cream mb-2 transition-colors">
+                  Ibijola Adebobola David
+                </h3>
+                <p className="text-lg text-text-dark/60 dark:text-cream/60 font-mono mb-8 transition-colors">
+                  200 Level Nursing Student • First Class Scholar
+                </p>
+                
+                <div className="space-y-6 text-text-dark/80 dark:text-cream/80 text-lg leading-relaxed transition-colors mb-10">
+                  <p>
+                    Hi, I'm David! I designed and built this website as my second-semester examination project for an Entrepreneurship (ENT) course. As a passionate tech enthusiast, I enrolled in programming as my entrepreneurial skill to bridge the gap between healthcare and digital innovation.
+                  </p>
+                  <p>
+                    I'm currently a Full Stack Developer proficient in modern web technologies including React, TypeScript, Node.js, and Tailwind CSS. Despite the rigorous demands of maintaining a First Class in Nursing, I've dedicated myself to mastering software engineering and UI/UX design, ensuring every project I touch is highly productive, performant, and standard.
+                  </p>
+                  <p>
+                    Whether I'm studying the human anatomy or debugging complex application states, my goal is always excellence. If you'd like to collaborate or just say hi, feel free to reach out to me via the form below!
+                  </p>
+                </div>
+
+                {/* Reach out form */}
+                <div className="bg-cream dark:bg-dark-bg p-8 rounded-[30px] border border-black/5 dark:border-white/10 shadow-lg mt-8">
+                  <h4 className="text-2xl font-serif font-bold text-text-dark dark:text-cream mb-6">Reach the Builder</h4>
+                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Message sent to David!"); }}>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <input type="text" placeholder="Your Name" required className="w-full px-6 py-4 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary-green text-text-dark dark:text-cream transition-colors" />
+                      <input type="email" placeholder="Your Email" required className="w-full px-6 py-4 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary-green text-text-dark dark:text-cream transition-colors" />
+                    </div>
+                    <textarea placeholder="Your Message..." required rows={4} className="w-full px-6 py-4 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary-green text-text-dark dark:text-cream transition-colors resize-none"></textarea>
+                    <button type="submit" className="w-full px-8 py-4 bg-primary-green text-cream rounded-2xl font-sans font-bold text-sm uppercase tracking-widest hover:bg-opacity-90 transition-all">
+                      Send Message to David
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </section>
       </div>
     </div>
   );

@@ -86,7 +86,7 @@ export const Navigation = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full glass p-8 flex flex-col gap-6 lg:hidden border-t border-cream/20 dark:border-white/10"
+              className="absolute top-full left-0 w-full bg-cream dark:bg-dark-bg shadow-xl p-8 flex flex-col gap-6 lg:hidden border-t border-cream/20 dark:border-white/10"
             >
               {navLinks.map((link) => (
                 <NavLink 

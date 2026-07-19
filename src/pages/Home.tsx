@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useInView } from "motion/react";
-import { GraduationCap, BookOpen, Users, Trophy, Building2, Palette, ArrowRight, ChevronDown } from "lucide-react";
+import { GraduationCap, BookOpen, Users, Trophy, Building2, Palette, ArrowRight, ChevronDown, Landmark, ListChecks, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AnimatedNumber = ({ value }: { value: string }) => {
@@ -67,14 +67,8 @@ export const Home = () => {
           className="absolute inset-0 z-0"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url('/IMG_6152.jpg')`,
-            }}
-          />
-          <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(135deg, rgba(30,60,40,0.85) 0%, rgba(46,107,62,0.6) 100%)' }}
+            style={{ background: 'linear-gradient(135deg, rgba(30,60,40,1) 0%, rgba(46,107,62,1) 100%)' }}
           />
 
           {/* Bokeh Particles */}
@@ -112,9 +106,9 @@ export const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-2xl text-cream/80 font-sans max-w-2xl mb-12 leading-relaxed"
+              className="text-lg md:text-2xl text-cream/80 font-sans max-w-3xl mb-12 leading-relaxed"
             >
-              A community of over 800+ dreamers, innovators, and change-makers — Iloro Ekiti, Ekiti State, Nigeria.
+              More than a university, Venite University is a community of over 800 aspiring leaders, innovators, and changemakers, empowering students to achieve excellence and shape the future — Iloro Ekiti, Ekiti State, Nigeria.
             </motion.p>
 
             <motion.div
@@ -151,16 +145,6 @@ export const Home = () => {
         </motion.div>
       </section>
 
-      {/* --- Stats Strip --- */}
-      <section className="relative z-20 -mt-16 container mx-auto px-6">
-        <div className="glass grid grid-cols-2 md:grid-cols-4 divide-x divide-cream/10 dark:divide-white/5 rounded-[30px] overflow-hidden">
-          <StatItem icon={GraduationCap} value="3" label="Colleges" />
-          <StatItem icon={BookOpen} value="20+" label="Programmes" />
-          <StatItem icon={Users} value="800+" label="Students" />
-          <StatItem icon={Trophy} value="2019" label="Est. Since" />
-        </div>
-      </section>
-
       {/* --- Welcome Section --- */}
       <section className="py-24 md:py-32 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -171,13 +155,12 @@ export const Home = () => {
             className="relative rounded-[40px] overflow-hidden aspect-[4/5] shadow-2xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=800"
+              src="/Gate.png"
               alt="Venite Campus Life"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-white/20"></div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -192,10 +175,13 @@ export const Home = () => {
             </h2>
             <div className="space-y-6 text-text-dark/80 dark:text-cream/80 text-lg leading-relaxed mb-10 transition-colors">
               <p>
-                Where we strive to foster innovation, excellence, and growth. At Venite, we believe in the power of education to transform lives.
+                Where we strive to foster innovation, excellence, and growth, whether you’re a prospective student, current student, faculty member, or visitor, we’re delighted to have you explore our vibrant community.
               </p>
               <p>
-                Our diverse programmes and cutting-edge research provide fertile ground for discovery and intellectual engagement. We are committed to building character and imparting knowledge that lasts a lifetime.
+                At Venite, we believe in the power of education to transform lives. Our diverse programs and cutting-edge research provide a fertile ground for discovery and intellectual engagement. Our dedicated faculty and staff are here to support you on your journey, offering an environment that nurtures creativity and critical thinking.
+              </p>
+              <p>
+                Explore our beautiful campus, state-of-the-art facilities, and a rich tapestry of academic and extracurricular opportunities. We invite you to become a part of a community that values knowledge, inclusivity, and a commitment to making a positive impact in the world.
               </p>
             </div>
             <Link to="/about" className="group flex items-center gap-3 text-primary-green dark:text-accent-green font-bold uppercase tracking-widest text-sm w-fit transition-colors">
@@ -206,6 +192,63 @@ export const Home = () => {
               </div>
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* --- Quick Links Section --- */}
+      <section className="py-24 bg-primary-green dark:bg-[#112417] relative overflow-hidden transition-colors">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: ListChecks,
+                title: "Programmes",
+                desc: "Discover our diverse range of undergraduate, graduate, and professional programs across various disciplines. From business and technology to arts and sciences, our programs are designed to equip students with the knowledge and skills needed for success in today's ever-evolving world.",
+                linkText: "Discover now",
+                linkUrl: "/programmes"
+              },
+              {
+                icon: GraduationCap,
+                title: "Admission",
+                desc: "Join our esteemed community of learners by applying to Venite University. Our admissions process is designed to identify bright, motivated individuals who are passionate about their education. Explore our application requirements, important dates, and how to submit your application.",
+                linkText: "Start here",
+                linkUrl: "https://ecampus.veniteuniversity.edu.ng/admissions"
+              },
+              {
+                icon: Clock,
+                title: "Campus Life",
+                desc: "Immerse yourself in the vibrant campus life at Venite University. Experience a range of extracurricular activities, join student organizations, and participate in community engagement initiatives. Our campus offers state-of-the-art facilities, modern amenities, and a welcoming environment.",
+                linkText: "Discover now",
+                linkUrl: "/campus-life"
+              },
+              {
+                icon: Landmark,
+                title: "College",
+                desc: "Meet our esteemed faculty members who bring a wealth of expertise and experience to the classroom. Our dedicated professors are committed to providing quality education, mentoring students, and conducting groundbreaking research that pushes the boundaries of knowledge.",
+                linkText: "Start now",
+                linkUrl: "/colleges"
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-green p-10 rounded-[30px] border border-cream/10 flex flex-col text-center group hover:bg-cream/10 hover:-translate-y-2 transition-all duration-300 shadow-xl"
+              >
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-2xl flex items-center justify-center text-gold mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon size={40} />
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-cream mb-4">{item.title}</h3>
+                <p className="text-cream/70 leading-relaxed text-sm mb-8 flex-grow">{item.desc}</p>
+                <Link to={item.linkUrl} className="inline-flex items-center justify-center gap-2 text-gold/70 hover:text-gold font-bold text-sm tracking-wide transition-colors uppercase">
+                  {item.linkText} <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
