@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Compass, ShieldCheck, Award, Star } from "lucide-react";
+import { Compass, ShieldCheck, Award, Star, Code2, Layout, Zap, Smartphone } from "lucide-react";
 
 export const About = () => {
   return (
@@ -70,7 +70,7 @@ export const About = () => {
                 Professor Charity O. Aremu
               </h2>
               <h3 className="text-xl text-primary-green dark:text-accent-green font-medium mb-8">
-                Vice-Chancellor, Venite University (Inaugurated 2025/2026 Session)
+                Vice-Chancellor, Venite University (Inaugurated 2026/2027 Session)
               </h3>
               
               <div className="space-y-6 text-text-dark/80 dark:text-cream/80 text-lg leading-relaxed mb-10 transition-colors">
@@ -140,20 +140,51 @@ export const About = () => {
             <div className="h-[2px] w-8 bg-accent-green"></div>
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent-green font-bold">Behind The Scenes</span>
           </div>
-          <h3 className="text-3xl font-serif font-bold text-text-dark dark:text-cream mb-6 transition-colors">Methodology: How We Built This</h3>
-          <div className="space-y-4 text-text-dark/70 dark:text-cream/70 leading-relaxed text-lg transition-colors">
-            <p>
-              This digital experience was crafted using modern web development methodologies, prioritizing both performance and aesthetic elegance. The foundation is built upon <strong>React</strong> for dynamic, component-based architecture and robust state management.
-            </p>
-            <p>
-              For our visual identity and responsive design, we utilized <strong>Tailwind CSS</strong>, allowing for rapid, utility-first styling that adapts seamlessly across all devices. The application features a custom theming engine supporting both light and immersive dark modes, driven by CSS variables and Tailwind's variant system.
-            </p>
-            <p>
-              Fluid animations and micro-interactions—which give the interface its premium feel—are powered by <strong>Motion (framer-motion)</strong>. This enables sophisticated scroll-based reveals, parallax effects, and smooth layout transitions without compromising performance.
-            </p>
-            <p>
-              Finally, the project is structured as a Single Page Application (SPA) using <strong>React Router</strong>, ensuring instantaneous navigation between sections while maintaining context and state, avoiding jarring page reloads for a native-like user experience.
-            </p>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold text-text-dark dark:text-cream mb-8 transition-colors">Methodology: The Architecture</h3>
+          <p className="text-lg text-text-dark/70 dark:text-cream/70 leading-relaxed max-w-3xl mb-12">
+            Built as a second-semester examination project for an Entrepreneurship (ENT) course, this digital experience bridges the gap between healthcare studies and digital innovation. It was crafted using modern web development methodologies, prioritizing both performance and aesthetic elegance.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white/50 dark:bg-black/20 p-8 rounded-[20px] border border-black/5 dark:border-white/10 group hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary-green/10 dark:bg-accent-green/10 rounded-2xl flex items-center justify-center text-primary-green dark:text-accent-green mb-6 group-hover:scale-110 transition-transform">
+                <Code2 size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-text-dark dark:text-cream mb-3">React & TypeScript</h4>
+              <p className="text-text-dark/70 dark:text-cream/70 leading-relaxed text-base">
+                The foundation is built upon React for dynamic, component-based architecture and robust state management. TypeScript ensures type safety, reducing runtime errors and improving overall code quality and maintainability.
+              </p>
+            </div>
+
+            <div className="bg-white/50 dark:bg-black/20 p-8 rounded-[20px] border border-black/5 dark:border-white/10 group hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary-green/10 dark:bg-accent-green/10 rounded-2xl flex items-center justify-center text-primary-green dark:text-accent-green mb-6 group-hover:scale-110 transition-transform">
+                <Layout size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-text-dark dark:text-cream mb-3">Tailwind CSS</h4>
+              <p className="text-text-dark/70 dark:text-cream/70 leading-relaxed text-base">
+                For our visual identity, we utilized Tailwind CSS, allowing for rapid, utility-first styling. The application features a custom theming engine supporting both light and immersive dark modes, seamlessly adapting to user preferences.
+              </p>
+            </div>
+
+            <div className="bg-white/50 dark:bg-black/20 p-8 rounded-[20px] border border-black/5 dark:border-white/10 group hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary-green/10 dark:bg-accent-green/10 rounded-2xl flex items-center justify-center text-primary-green dark:text-accent-green mb-6 group-hover:scale-110 transition-transform">
+                <Zap size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-text-dark dark:text-cream mb-3">Framer Motion</h4>
+              <p className="text-text-dark/70 dark:text-cream/70 leading-relaxed text-base">
+                Fluid animations and micro-interactions—which give the interface its premium feel—are powered by Motion. This enables sophisticated scroll-based reveals, parallax effects, and smooth layout transitions without compromising performance.
+              </p>
+            </div>
+
+            <div className="bg-white/50 dark:bg-black/20 p-8 rounded-[20px] border border-black/5 dark:border-white/10 group hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary-green/10 dark:bg-accent-green/10 rounded-2xl flex items-center justify-center text-primary-green dark:text-accent-green mb-6 group-hover:scale-110 transition-transform">
+                <Smartphone size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-text-dark dark:text-cream mb-3">Responsive SPA</h4>
+              <p className="text-text-dark/70 dark:text-cream/70 leading-relaxed text-base">
+                The project is structured as a Single Page Application (SPA) using React Router, ensuring instantaneous navigation between sections. It is fully responsive, providing a native-like user experience across all device form factors.
+              </p>
+            </div>
           </div>
         </motion.div>
       </section>

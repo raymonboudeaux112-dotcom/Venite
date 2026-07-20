@@ -53,7 +53,7 @@ export const Home = () => {
   const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.1]);
 
   const newsItems = [
-    "2025/2026 Admission Now Open — Apply Early",
+    "2026/2027 Admission Now Open — Apply Early",
     "Download 2024/2025 School Fees Schedule",
     "Venite University: Fostering Excellence in Ekiti State"
   ];
@@ -117,9 +117,9 @@ export const Home = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center gap-6"
             >
-              <a href="https://ecampus.veniteuniversity.edu.ng/admissions" className="shimmer-btn w-full sm:w-auto px-10 py-5 bg-accent-green text-cream rounded-full font-sans font-bold uppercase tracking-widest hover:scale-105 transition-transform text-center">
+              <Link to="/admissions" className="shimmer-btn w-full sm:w-auto px-10 py-5 bg-accent-green text-cream rounded-full font-sans font-bold uppercase tracking-widest hover:scale-105 transition-transform text-center">
                 Apply Now
-              </a>
+              </Link>
               <Link to="/programmes" className="w-full sm:w-auto px-10 py-5 glass border-cream/30 text-cream rounded-full font-sans font-bold uppercase tracking-widest hover:bg-cream/10 transition-colors text-center">
                 Explore Programmes
               </Link>
@@ -213,21 +213,19 @@ export const Home = () => {
                 title: "Admission",
                 desc: "Join our esteemed community of learners by applying to Venite University. Our admissions process is designed to identify bright, motivated individuals who are passionate about their education. Explore our application requirements, important dates, and how to submit your application.",
                 linkText: "Start here",
-                linkUrl: "https://ecampus.veniteuniversity.edu.ng/admissions"
+                linkUrl: "/admissions"
               },
               {
                 icon: Clock,
                 title: "Campus Life",
-                desc: "Immerse yourself in the vibrant campus life at Venite University. Experience a range of extracurricular activities, join student organizations, and participate in community engagement initiatives. Our campus offers state-of-the-art facilities, modern amenities, and a welcoming environment.",
-                linkText: "Discover now",
-                linkUrl: "/campus-life"
+                desc: "Immerse yourself in the vibrant campus life at Venite University. Experience a range of extracurricular activities, join student organizations, and participate in community engagement initiatives. Our campus offers state-of-the-art facilities, modern amenities, and a welcoming environment."
               },
               {
                 icon: Landmark,
                 title: "College",
                 desc: "Meet our esteemed faculty members who bring a wealth of expertise and experience to the classroom. Our dedicated professors are committed to providing quality education, mentoring students, and conducting groundbreaking research that pushes the boundaries of knowledge.",
                 linkText: "Start now",
-                linkUrl: "/colleges"
+                linkUrl: "/programmes"
               }
             ].map((item, i) => (
               <motion.div
@@ -243,9 +241,11 @@ export const Home = () => {
                 </div>
                 <h3 className="text-2xl font-serif font-bold text-cream mb-4">{item.title}</h3>
                 <p className="text-cream/70 leading-relaxed text-sm mb-8 flex-grow">{item.desc}</p>
-                <Link to={item.linkUrl} className="inline-flex items-center justify-center gap-2 text-gold/70 hover:text-gold font-bold text-sm tracking-wide transition-colors uppercase">
-                  {item.linkText} <ArrowRight size={16} />
-                </Link>
+                {item.linkText && item.linkUrl && (
+                  <Link to={item.linkUrl} className="inline-flex items-center justify-center gap-2 text-gold/70 hover:text-gold font-bold text-sm tracking-wide transition-colors uppercase">
+                    {item.linkText} <ArrowRight size={16} />
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
@@ -314,9 +314,9 @@ export const Home = () => {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-7xl font-serif font-bold text-cream mb-8 mb-12">Begin Your Journey Today</h2>
+          <h2 className="text-4xl md:text-7xl font-serif font-bold text-cream mb-12">Begin Your Journey Today</h2>
           <p className="text-xl md:text-2xl text-cream/70 max-w-3xl mx-auto mb-16 leading-relaxed">
-            Admissions are now open for the 2025/2026 academic session. Join a forward-looking university committed to excellence, innovation, and values-driven education.
+            Admissions are now open for the 2026/2027 academic session. Join a forward-looking university committed to excellence, innovation, and values-driven education.
           </p>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-20">
@@ -337,13 +337,13 @@ export const Home = () => {
             </div>
           </div>
 
-          <a
-            href="https://ecampus.veniteuniversity.edu.ng/admissions"
+          <Link
+            to="/admissions"
             className="shimmer-btn inline-flex items-center gap-4 px-12 py-6 bg-gold text-text-dark rounded-full font-sans font-bold uppercase tracking-widest hover:scale-105 transition-transform"
           >
             Apply Now
             <ArrowRight size={24} />
-          </a>
+          </Link>
         </div>
       </section>
 

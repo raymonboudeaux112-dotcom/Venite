@@ -84,14 +84,13 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <h5 className="font-bold text-sm uppercase tracking-widest text-text-dark dark:text-cream">Academics</h5>
-            <a href="https://ecampus.veniteuniversity.edu.ng/admissions" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Admissions</a>
-            <a href="#" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Student Portal</a>
-            <a href="#" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">LMS</a>
+            <Link to="/admissions" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Admissions</Link>
+            <a href="https://ecampus.veniteuniversity.edu.ng/portal/" target="_blank" rel="noopener noreferrer" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Student Portal</a>
+            <Link to="/contact" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">LMS</Link>
           </div>
           <div className="flex flex-col gap-4">
             <h5 className="font-bold text-sm uppercase tracking-widest text-text-dark dark:text-cream">Institutional</h5>
-            <Link to="/contact" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Careers</Link>
-            <Link to="/contact" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Privacy Policy</Link>
+            <a href="https://careers.veniteuniversity.edu.ng/" target="_blank" rel="noopener noreferrer" className="font-sans font-medium text-text-dark/70 dark:text-cream/70 hover:text-accent-green dark:hover:text-accent-green transition-colors text-sm uppercase tracking-wider">Careers</a>
           </div>
         </div>
 

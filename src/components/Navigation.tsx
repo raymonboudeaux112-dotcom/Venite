@@ -65,9 +65,9 @@ export const Navigation = () => {
               </NavLink>
             ))}
             <ThemeToggle />
-            <a href="https://ecampus.veniteuniversity.edu.ng/admissions" target="_blank" rel="noopener noreferrer" className="shimmer-btn px-8 py-3 bg-primary-green text-cream rounded-full font-sans font-medium text-sm border-gold/30 border hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] transition-all uppercase tracking-widest">
+            <Link to="/admissions" className="shimmer-btn px-8 py-3 bg-primary-green text-cream rounded-full font-sans font-medium text-sm border-gold/30 border hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] transition-all uppercase tracking-widest">
               Apply Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -98,9 +98,9 @@ export const Navigation = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <a href="https://ecampus.veniteuniversity.edu.ng/admissions" target="_blank" rel="noopener noreferrer" className="w-full mt-4 py-4 text-center bg-primary-green text-cream rounded-full font-sans font-bold text-sm uppercase tracking-widest block">
+              <Link to="/admissions" onClick={() => setIsMenuOpen(false)} className="w-full mt-4 py-4 text-center bg-primary-green text-cream rounded-full font-sans font-bold text-sm uppercase tracking-widest block">
                 Apply Now
-              </a>
+              </Link>
             </motion.div>
           )}
         </AnimatePresence>

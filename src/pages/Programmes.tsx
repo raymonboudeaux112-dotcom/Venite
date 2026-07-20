@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { Clock, Building2, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const colleges = [
   {
@@ -71,7 +72,7 @@ const colleges = [
   }
 ];
 
-const CollegeSection = ({ college }: { college: typeof colleges[0] }) => {
+const CollegeSection: React.FC<{ college: typeof colleges[0] }> = ({ college }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -151,14 +152,12 @@ const CollegeSection = ({ college }: { college: typeof colleges[0] }) => {
               </p>
 
               {/* Apply Button */}
-              <a 
-                href="https://ecampus.veniteuniversity.edu.ng/admissions"
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/admissions"
                 className="block w-full text-center py-3.5 border-2 border-gray-200 dark:border-white/10 rounded-xl text-text-dark dark:text-cream font-bold text-sm tracking-wide group-hover:border-primary-green group-hover:text-primary-green transition-all"
               >
                 Apply Now <ArrowRight size={16} className="inline ml-1 -mt-0.5" />
-              </a>
+              </Link>
             </div>
           </div>
         ))}
